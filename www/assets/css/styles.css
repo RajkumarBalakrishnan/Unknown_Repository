@@ -1,0 +1,92 @@
+html,body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+input:focus,select:focus,textarea:focus,button:focus {
+	outline: none;
+}
+
+.Lgn_page {
+	background: url(../images/BG_Image.jpg) no-repeat;
+	background-size: 100%;
+	min-height: 730px;
+}
+
+#logo {
+	background: url(../images/ING-Logo.png) no-repeat;
+	background-repeat: no-repeat;
+	background-size: 50% 50%;
+	background-position: center;
+	height: 200px;
+	width: 100%;
+}
+
+input.transparent-input {
+	background-color: transparent !important;
+	border: none !important;
+	line-height: 2.2em;
+	width: 80%;
+	color: white;
+	font-size: 20px;
+	margin-left: 4%;
+}
+
+.lgn_title {
+	color: white;
+	font-size: 20px;
+	text-shadow: none;
+	text-align: left;
+	margin-left: 15%;
+}
+
+.txt_forgetpwd {
+	color: #C8810D;
+	font-size: 20px;
+	text-shadow: none;
+	text-align: center;
+	
+}
+.lgn_btn_trns{
+	color: gray;
+font-size: 20px;
+text-shadow: none;
+text-align: center;
+border: 1px solid #89919F;
+line-height: 2.2em;
+border-radius: 8px;
+width: 81%;
+margin-left: 8%;
+margin-top: 10%;
+}
+hr.lgn_spliter {
+	width: 80%;
+	color: #89919F !important;
+	background-color: #89919F !important;
+	height: 0.5px;
+	background-color: #89919F;
+}
+
+.lgn_container {
+	position: relative;
+	margin: 10%;
+	text-align: center;
+	text-shadow: none;
+	height: 100%;
+	width: 80%;
+	display: inline-block;
+}
+
+.signin_btn {
+	position: relative;
+	padding: 3%;
+	width: 70%;
+}
+
+.txt_icon {
+	position: relative;
+	width: 10%;
+	height: 5%;
+	top: 12px;
+}
