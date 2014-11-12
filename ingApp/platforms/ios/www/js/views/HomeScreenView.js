@@ -14,8 +14,13 @@ define([ 'jquery', 'underscore', 'backbone', 'Handlebars', 'jquerymobile',
 
 		events : {
 			"click #Profile" : "goToProfile",
-			"click #Health" : "goToHealth"
+			"click #Health" : "goToHealth",
+            "click #Logout" :"goToLogout"
+                                              
 		},
+        goToLogout:function(){
+        Backbone.history.navigate("*actions", true);
+        },
 		goToHealth:function(){
 			Backbone.history.navigate("health", true);
 		},
@@ -30,9 +35,15 @@ define([ 'jquery', 'underscore', 'backbone', 'Handlebars', 'jquerymobile',
 		},
 
 		render : function() {
-            alert(appGlobal.accesstoken);
-
-			$(this.el).html(this.template());
+            var data =  appGlobal.personData;
+            var str =data.name;
+            var name =str.split(",");
+            var modeldata = {
+            firstName :name[0],
+                lastName:name[1]
+            };
+           
+			$(this.el).html(this.template(modeldata));
 
 		}
 

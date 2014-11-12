@@ -3,9 +3,9 @@
  *
  * -> Defining our travel app routes
  */
-define([ 'jquery', 'underscore', 'backbone'
+define([ 'jquery', 'underscore', 'backbone','appGlobal'
 
-], function($, _, Backbone) {
+], function($, _, Backbone,appGlobal) {
 
 	var AppRouter = Backbone.Router.extend({
 		routes : {
@@ -41,20 +41,18 @@ define([ 'jquery', 'underscore', 'backbone'
 
 		router.on('route:goToHomeScreenView', function(actions) {
 			require([ 'views/HomeScreenView' ], function(HomeScreenView) {
-				var homeScreenView = new HomeScreenView();
+                 
+                    
+                    var homeScreenView = new HomeScreenView();
 
 			});
 		});
 
 		router.on('route:goToProfileView', function(actions) {
-			require([ 'views/ProfileView', 'models/ProfileModel' ], function(
-					ProfileView, ProfileModel) {
-				var model = new ProfileModel();
-
-				//$.when(model.fetch()).done(function(profileData) {
-					var profileView = new ProfileView({
-					model:model	//model : profileData
-					});
+			require([ 'views/ProfileView' ], function(
+					ProfileView) {
+			
+					var profileView = new ProfileView();
 			 	});
 
 		});

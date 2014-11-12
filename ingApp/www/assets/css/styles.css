@@ -244,7 +244,7 @@ hr.lgn_spliter {
 }
 
 .row:nth-child(3) .hexagon:nth-child(2):before {
-	background-image: url(../images/Hexagon_BG.png);
+	background-image: url(../images/Profile_Button.png);
 }
 
 .row:nth-child(3) .hexagon:nth-child(3):before {
@@ -315,6 +315,7 @@ hr.lgn_spliter {
 	width: 100%;
 	padding: 2%;
 	margin-top: 5%;
+    border:1px solid orange;
 }
 
 .left_arrow {
@@ -342,7 +343,7 @@ hr.lgn_spliter {
 	font-size: large;
 	text-align: center;
 	font-weight: bold;
-	margin-left: -5%;
+    width:100%;
 }
 
 .top_align {

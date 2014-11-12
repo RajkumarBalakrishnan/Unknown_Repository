@@ -16,14 +16,70 @@ define([ 'jquery', 'underscore', 'backbone', 'Handlebars', 'jquerymobile',
 			"click .start_up_footer" : "goToHome"
 		},
         
+        getData : function(url){
+            var personRequest = $.ajax({
+                    type : 'GET',
+                    url : url,
+                    crossDomain : 'true',
+                    headers : {"Authorization": "Bearer "+appGlobal.accessToken},
+                    dataType : 'json'
+
+            });
+            personRequest.done(function(response, textStatus, jqXHR) {
+                alert(JSON.parse(response));
+                Backbone.history.navigate("Home",true);
+
+            });
+            personRequest.fail(function(jqXHR, textStatus, errorThrown) {
+                alert("error");
+            });
+        },
+        
         onLoadStart : function(evt){
+            var self = this;
             var url = evt.url;
             alert(evt.url);
             if(url.indexOf("access_token") >= 0){
                 var accessToken = url.substring(url.indexOf("access_token=")+13, url.indexOf("&state"));
                 appGlobal.accesstoken = accessToken;
                 ref.close();
-                Backbone.history.navigate("Home",true);
+                var url = "http://ingcommonapi-test.apigee.net/commonapi/v0/nl/me?apikey="+appGlobal.apiKey;
+                var request = $.ajax({
+                    type : 'GET',
+                    url : url,
+                    crossDomain : 'true',
+                    headers : {"Authorization": "Bearer "+accessToken},
+                    dataType : 'json'
+
+                });
+                request.done(function(response, textStatus, jqXHR) {
+                   // alert(response.userId);
+                    var personUrl = "http://ingcommonapi-test.apigee.net/commonapi/v0/nl/persons/"+response.userId+"?apikey="+appGlobal.apiKey;
+                    //alert(personUrl);
+                    var personRequest = $.ajax({
+                            type : 'GET',
+                            url : personUrl,
+                            crossDomain : 'true',
+                            headers : {"Authorization": "Bearer "+appGlobal.accesstoken},
+                            dataType : 'json'
+
+                    });
+                    personRequest.done(function(response, textStatus, jqXHR) {
+                        appGlobal.personData=response;
+                        Backbone.history.navigate("Home",true);
+
+                    });
+                    personRequest.fail(function(jqXHR, textStatus, errorThrown) {
+                        alert(textStatus);
+                        alert(JSON.parse(jqXHR));
+                    });
+//                    self.getData(personUrl);
+                   // Backbone.history.navigate("Home",true);
+                });
+                request.fail(function(jqXHR, textStatus, errorThrown) {
+                    alert("me error");
+                });
+                
             }
         },
 		
@@ -50,6 +106,3 @@ define([ 'jquery', 'underscore', 'backbone', 'Handlebars', 'jquerymobile',
 	});
 	return StartView;
 });
-
-
- 
