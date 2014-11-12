@@ -1,0 +1,440 @@
+html,body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.ui-page {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+}
+
+.start_up_footer {
+	height: 15%;
+	background: transparent !important;
+	border: none;
+	bottom: 6%;
+}
+
+input:focus,select:focus,textarea:focus,button:focus {
+	outline: none;
+}
+
+.Lgn_page {
+	background: url(../images/BG_Image.jpg) no-repeat;
+	background-size: 100%;
+	min-height: 736px;
+}
+
+.home_page {
+	background: url(../images/Homescreen_BG.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+.startUp_Page {
+	background: url(../images/Startup-Screen.png) no-repeat;
+	background-size: 100% 100%;
+	min-height: 736px;
+}
+
+.profile_page {
+	background: url(../images/BG_PNG.png) no-repeat;
+	background-size: 100%;
+	min-height: 736px;
+}
+
+#logo {
+	background: url('../images/ING-Logo.png') no-repeat scroll center center/50%
+		50% transparent;
+	width: 96%;
+	display: inline-block;
+	padding-top: 44%;
+}
+
+.logo {
+	width: 60%;
+	margin-left: 18%;
+}
+
+input.transparent-input {
+	background-color: transparent !important;
+	border: none !important;
+	line-height: 2.2em;
+	width: 80%;
+	color: white;
+	font-size: 20px;
+	margin-left: 4%;
+}
+
+.lgn_title {
+	color: white;
+	font-size: 20px;
+	text-shadow: none;
+	text-align: left;
+	margin-left: 15%;
+}
+
+.txt_forgetpwd {
+	color: #C8810D;
+	font-size: 20px;
+	text-shadow: none;
+	text-align: center;
+}
+
+.lgn_btn_trns {
+	color: gray;
+	font-size: 20px;
+	text-shadow: none;
+	text-align: center;
+	border: 1px solid #89919F;
+	line-height: 2.2em;
+	border-radius: 8px;
+	width: 81%;
+	margin-left: 8%;
+	margin-top: 10%;
+}
+
+hr.lgn_spliter {
+	width: 97%;
+	color: #89919F !important;
+	background-color: #89919F !important;
+	height: 0.5px;
+	background-color: #89919F;
+	color: #89919F !important;
+}
+
+.lgn_container {
+	position: relative;
+	margin: 10%;
+	text-align: center;
+	text-shadow: none;
+	height: 100%;
+	width: 80%;
+	display: inline-block;
+}
+
+.signin_btn {
+	position: relative;
+	padding: 3%;
+	width: 70%;
+}
+
+.txt_icon {
+	position: relative;
+	width: 10%;
+	height: 5%;
+	top: 12px;
+	left: 4%;
+}
+
+/**********************hex**************************/
+* {
+	-moz-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#Home_page {
+	height: 100% !important;
+}
+
+.home_header {
+	background: url('../images/header_new.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border: none;
+	height: 10%;
+}
+
+.user_name {
+	color: white;
+	line-height: 2.8em;
+	text-shadow: none;
+	padding-left: 4%;
+	font-size: large;
+	text-align: left;
+	font-weight: bold;
+}
+
+.user_img {
+	height: 75%;
+	margin-left: 3%;
+	margin-top: 2%;
+}
+
+.row {
+	margin: -9% -19%;
+	text-align: center;
+}
+
+.row:first-child {
+	margin-top: 60%;
+}
+
+.hexagon_block {
+	margin-top: 48%;
+}
+
+.hexagon {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	margin: 1px -0.5%;
+	padding-left: 12%;
+	padding-right: 12%;
+	padding-top: 12%;
+	padding-bottom: 12%;
+	transform: rotate(-30deg) skewX(30deg) scaleY(.866);
+}
+
+.middle_row {
+	margin: -9% -22%;
+}
+
+.hexagonmid {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	margin: 1px -0.5%;
+	padding-left: 12%;
+	padding-right: 12%;
+	padding-top: 12%;
+	padding-bottom: 12%;
+	transform: rotate(-30deg) skewX(30deg) scaleY(.866);
+}
+
+.hexagon:before,.content:after {
+	display: block;
+	position: absolute; /* 86.6% = (sqrt(3)/2)*100% = .866*100% */
+	right: 6.7%;
+	bottom: 0;
+	left: 6.7%;
+	top: 0; /* 6.7% = (100% -86.6%)/2 */
+	transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+	/* 1.155 = 2/sqrt(3) */
+	background-color: transparent;
+	background-size: cover;
+	content: '';
+}
+
+.content:after {
+	content: attr(data-content);
+}
+
+.row:first-child .hexagon:first-child:before {
+	background-image: url(../images/Hexagon_BG.png);
+}
+
+.row:nth-child(2) .hexagon:first-child:before {
+	background-image: url(../images/Transfer_Button.png);
+}
+
+.row:nth-child(2) .hexagon:nth-child(2):before {
+	background-image: url(../images/History_Button.png);
+}
+
+.row:nth-child(2) .hexagon:nth-child(3):before {
+	background-image: url('../images/Health_Button.png');
+}
+
+.row:nth-child(3) .hexagon:first-child:before {
+	background-image: url(../images/Hexagon_BG.png);
+	opacity: 0.7;
+}
+
+.row:nth-child(3) .hexagon:nth-child(2):before {
+	background-image: url(../images/Hexagon_BG.png);
+}
+
+.row:nth-child(3) .hexagon:nth-child(3):before {
+	background-image: url(../images/Logout_Button.png);
+}
+
+.row:nth-child(3) .hexagon:nth-child(4):before {
+	background-image: url(../images/Hexagon_BG.png);
+	opacity: 0.7;
+}
+
+.row:nth-child(4) .hexagon:first-child:before {
+	background-image: url(../images/Hexagon_BG.png);
+	opacity: 0.7;
+}
+
+.row:nth-child(4) .hexagon:nth-child(2):before {
+	background-image: url(../images/Hexagon_BG.png);
+	opacity: 0.7;
+}
+
+.row:nth-child(4) .hexagon:nth-child(3):before {
+	background-image: url(../images/Hexagon_BG.png);
+	opacity: 0.7;
+}
+
+.ribbon:after {
+	overflow: hidden;
+	top: 50%;
+	margin: -1.2em 0;
+	width: 86%;
+	height: 2.4em;
+	color: white;
+	text-shadow: none;
+	font: 1em;
+}
+
+.icon {
+	background-image: url(../images/History_Icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 46%;
+	z-index: 555;
+}
+
+.game:after {
+	margin: -.6em 0;
+	height: 1.2em;
+	background: rgba(25, 25, 112, .56);
+	color: lime;
+	font: 2em/1.2 monospace;
+	text-transform: uppercase;
+}
+
+.longtext:after {
+	top: 25%;
+	right: 5%;
+	left: 5%;
+	background: none;
+	color: white;
+	text-align: justify;
+}
+
+/***********************profile*****************/
+.divider_trans {
+	display: inline-block;
+	height: 10%;
+	width: 100%;
+	padding: 2%;
+	margin-top: 5%;
+}
+
+.left_arrow {
+	margin-left: 3%;
+	margin-top: 2%;
+	width: 10%;
+	float: left;
+}
+
+.prf_header {
+	color: #FFF;
+	line-height: 2.8em;
+	text-shadow: none;
+	left: -9%;
+	font-size: large;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+}
+
+.user_prf_name {
+	color: #FFF;
+	line-height: 1.8em;
+	text-shadow: none;
+	font-size: large;
+	text-align: center;
+	font-weight: bold;
+	margin-left: -5%;
+}
+
+.top_align {
+	margin-top: 15%;
+}
+
+.profile_menu_icon {
+	width: 100%;
+	height: 100%;
+}
+
+.user_img_big {
+	height: 25%;
+	width: 25%;
+	margin-left: 35%;
+	margin-top: 2%;
+}
+
+.heading_txt {
+	margin-left: 3%;
+	color: white;
+	font-size: small;
+	text-shadow: none;
+	font-weight: bold;
+	line-height: 2em;
+	margin-top: -2%;
+}
+
+.result_txt {
+	margin-left: 2%;
+	color: #C8810D;
+	font-size: medium;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+.address {
+	margin-top: 3%;
+	line-height: 1em;
+	z-index: 1111;
+	position: relative;
+}
+
+.address_menu {
+	padding: 0%;
+	margin-top: 0%;
+}
+
+.address_icon {
+	margin-top: 65%;
+	margin-left: 18%;
+}
+
+.profile_header {
+	background: url('../images/Header_Bg.png') no-repeat scroll 0% 0%/100%
+		auto transparent;
+	text-align: center;
+	color: white;
+	font-size: large;
+	text-shadow: none;
+	font-weight: bold;
+	line-height: 3em;
+	border: none;
+}
+
+/*******************Health page**********************/
+.Health_page {
+	background: url(../images/BG_Image.jpg) no-repeat;
+	background-size: 100%;
+	min-height: 736px;
+}
+
+.ing_logo {
+	margin-left: 1%;
+	top: 16%;
+	width: 34%;
+	position: relative;
+}
+
+.menu_icon {
+	margin-left: 3%;
+	margin-top: 2%;
+	width: 10%;
+	float: right;
+}
+
+.Month_name {
+	text-align: left;
+	text-shadow: none;
+	border: medium none;
+	font-size: 4em;
+	color: white;
+	line-height: 1.5em;
+ 
+}
